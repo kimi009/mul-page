@@ -4,6 +4,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   entry: {
+    vendor: ['babel-polyfill'],
     index: './src/assets/js/index.js',
     test: './src/assets/js/test.js'
   },
@@ -13,6 +14,11 @@ module.exports = {
   },
   module: {
     rules: [
+      { 
+        test: /\.js$/,
+        exclude: /node_modules/, 
+        loader: 'babel-loader'
+      },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -59,13 +65,13 @@ module.exports = {
       title: 'index',
       filename: 'index.html',
       template: './src/views/index.html',
-      chunks: ['index']
+      chunks: ['vendor', 'index']
     }),
     new HtmlWebpackPlugin({
       title: 'test',
       filename: 'test.html',
       template: './src/views/test.html',
-      chunks: ['test']
+      chunks: ['vendor', 'test']
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
