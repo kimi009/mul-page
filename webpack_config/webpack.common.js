@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-
+const webpack = require('webpack')
 module.exports = {
   entry: {
     vendor: ['babel-polyfill'],
@@ -64,13 +64,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'index',
       filename: 'index.html',
-      template: './src/views/index.html',
+      template: './src/pages/index.html',
       chunks: ['vendor', 'index']
     }),
     new HtmlWebpackPlugin({
       title: 'test',
       filename: 'test.html',
-      template: './src/views/test.html',
+      template: './src/pages/test.html',
       chunks: ['vendor', 'test']
     }),
     new MiniCssExtractPlugin({
