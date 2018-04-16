@@ -4,7 +4,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
   entry: {
-    vendor: ['babel-polyfill'],
+    vendor: ['./src/assets/js/public.js', 'babel-polyfill'],
     index: './src/assets/js/index.js',
     test: './src/assets/js/test.js'
   },
