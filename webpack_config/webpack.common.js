@@ -2,18 +2,56 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack')
+const path = require('path')
+const glob = require('glob')
+
+let entries = {}
+let htmlPlugin = []
+glob.sync('./src/pages/*.html').forEach(path => {
+  let filename = path.substring(path.lastIndexOf('\/') + 1, path.lastIndexOf('.'))
+  entries[filename] = './src/assets/js/' + filename + '.js'
+  let htmlConf = {
+    filename: filename + '.html',
+    template: path,
+    chunks: ['vendor', filename]
+  }
+  htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
+})
 module.exports = {
-  entry: {
-    vendor: ['./src/assets/js/public.js', 'babel-polyfill'],
-    index: './src/assets/js/index.js',
-    test: './src/assets/js/test.js'
-  },
+  entry: entries,
   output: {
     filename: 'js/[name].bundle.js',
-    chunkFilename: 'js/[id].chunk.js'
+    chunkFilename: 'js/[name].bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.join(__dirname, '../src')
+    }
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            scss: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  minimize: true,
+                  importLoaders: 2
+                }
+              },
+              'postcss-loader',
+              'sass-loader'
+            ]
+          }
+        }
+      },
       { 
         test: /\.js$/,
         exclude: /node_modules/, 
@@ -60,22 +98,21 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'initial',
+      cacheGroups: {
+        vendor: {
+          name: 'vendor'
+        }
+      }
+    }
+  },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'index',
-      filename: 'index.html',
-      template: './src/pages/index.html',
-      chunks: ['vendor', 'index']
-    }),
-    new HtmlWebpackPlugin({
-      title: 'test',
-      filename: 'test.html',
-      template: './src/pages/test.html',
-      chunks: ['vendor', 'test']
-    }),
+    ...htmlPlugin,
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css'
+      chunkFilename: 'css/[name].css'
     }),
     new FaviconsWebpackPlugin({
       logo: './src/assets/img/icon.png',
@@ -99,8 +136,12 @@ module.exports = {
         windows: false
       }
     })
-  ],
-  externals: {
-    'jquery': 'jQuery'
-  }
+  ]
+  // cdn
+  // "https://code.jquery.com/jquery-3.3.1.min.js"
+  // "https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"
+  // externals: {
+  //   'jquery': 'jQuery',
+  //   'vue': 'Vue'
+  // }
 }

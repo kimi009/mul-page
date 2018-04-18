@@ -1,1 +1,2 @@
-import '../style/index.scss'
+import 'babel-polyfill'
+import 'normalize.css'
