@@ -38,7 +38,12 @@ module.exports = {
         options: {
           loaders: {
             scss: [
-              MiniCssExtractPlugin.loader,
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '../'
+                }
+              },
               {
                 loader: 'css-loader',
                 options: {
@@ -60,7 +65,12 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           {
             loader: 'css-loader',
             options: {
