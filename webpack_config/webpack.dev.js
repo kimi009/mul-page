@@ -8,6 +8,8 @@ module.exports = merge(common, {
   },
   devtool: 'inline-source-map',
   devServer: {
+    host: 'localhost',
+    port: '8080',
     contentBase: './dist',
     proxy: {
       '/api': {

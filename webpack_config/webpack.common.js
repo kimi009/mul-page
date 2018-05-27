@@ -20,8 +20,8 @@ glob.sync('./src/pages/*.html').forEach(path => {
 module.exports = {
   entry: entries,
   output: {
-    filename: 'js/[name].bundle.js',
-    chunkFilename: 'js/[name].bundle.js'
+    filename: 'js/[name].min.js',
+    chunkFilename: 'js/[name].min.js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -34,28 +34,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            scss: [
-              {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: '../'
-                }
-              },
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true,
-                  importLoaders: 2
-                }
-              },
-              'postcss-loader',
-              'sass-loader'
-            ]
-          }
-        }
+        loader: 'vue-loader'
       },
       { 
         test: /\.js$/,
@@ -79,7 +58,12 @@ module.exports = {
             }
           },
           'postcss-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              data: '@import "~@/assets/style/var.scss";'
+            }
+          }
         ]
       },
       {
