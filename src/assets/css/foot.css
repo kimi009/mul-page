@@ -1,0 +1,23 @@
+.foot {
+    height: 80px;
+    background-color: #fff;
+    margin-top: 170px;
+}
+
+.foot>p {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.foot>p:first-child {
+    padding-top: 22px;
+}
+
+.foot>p:last-child {
+    margin-top: 6px;
+}
+
+.foot>p>a:hover {
+    color: #333;
+}

@@ -1,0 +1,157 @@
+.wrap {
+    min-width: 1300px;
+    overflow: hidden;
+}
+
+.wrap>.content>.bg>img {
+    width: 100vw;
+    height: auto;
+    min-width: 1300px;
+}
+
+.wrap>.content>.platform {
+    height: 558px;
+    background: #f6f6f7 url("../../images/partner/bg.png") center center no-repeat;
+    padding-top: 31px;
+}
+
+.wrap>.content>.platform>.title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 6px;
+}
+
+.wrap>.content>.platform>.underline {
+    width: 64px;
+    border: 1px solid #108ee9;
+    margin: 0 auto;
+    margin-top: 7px;
+}
+
+.wrap>.content>.platform>.content {
+    text-align: center;
+    margin-top: 39px;
+    min-width: 1472px;
+}
+
+.wrap>.content>.platform>.content>div {
+    display: inline-block;
+    width: 358px;
+    height: 286px;
+    background-color: #fff;
+    margin-right: 5px;
+    box-shadow: 0px 0px 16px rgba(2, 2, 2, 0.08);
+    border: 1px solid #fff;
+}
+
+.wrap>.content>.platform>.content>div:hover {
+    border: 1px solid #b0cff5;
+}
+
+.wrap>.content>.platform>.content>div:last-child {
+    margin-right: 0;
+}
+
+.wrap>.content>.platform>.content>.yanhuang {
+    background: #fff url("../../images/company/yanhuang.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.platform>.content>.zhongruan {
+    background: #fff url("../../images/company/zhongruan.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.platform>.content>.jinghua {
+    background: #fff url("../../images/company/jinghua.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.platform>.content>.pingao {
+    background: #fff url("../../images/company/pingao.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.platform>.content>div>.name {
+    margin-top: 174px;
+    font-size: 23px;
+}
+
+.wrap>.content>.platform>.content>div>.desc {
+    font-size: 13px;
+    color: #888;
+    margin-top: 13px;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.modal>.content {
+    width: 280px;
+    height: 340px;
+    margin: 338px auto;
+    padding: 34px 100px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.modal>.content>.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.modal>.content>.underline {
+    width: 175px;
+    border: 1px solid #3d8ae7;
+    border-radius: 1px;
+    margin-top: 7px;
+}
+
+.modal>.content>.content {
+    margin-top: 21px;
+}
+
+.modal>.content>.content>p {
+    padding-left: 48px;
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+.modal>.content>.content>p:first-child {
+    background: url("../../images/partner/ico_home.png") 10px center no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p {
+    background: url("../../images/partner/ico_location.png") 10px 4px no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p+p {
+    background: url("../../images/partner/ico_call.png") 10px center no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p+p+p {
+    background: url("../../images/partner/ico_email.png") 10px center no-repeat;
+}
+
+.modal>.content>a {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 36px;
+    background-color: #f15454;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 46px;
+}

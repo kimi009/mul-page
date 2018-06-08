@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>注册-票税宝</title>
+  <link href="../../css/base.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../css/foot.css">
+  <link rel="stylesheet" href="../../css/white-common.css">
+  <link rel="stylesheet" href="../../css/personal/register.css">
+  <link rel="stylesheet" href="../../plugins/toast/css/toast.css">
+  <script src="../../plugins/jquery.min.js"></script>
+  <script src="../../plugins/toast/toast.js"></script>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/api.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="psb-logo" onclick="window.location.href='../../../index.html'"></div>
+      <p class="title">
+        <span></span>
+        <span>注册</span>
+      </p>
+      <div class="main-menu">
+        <a href="../../page/personal/personal-index.html" class="channel-a">首页</a>
+        <a href="../../page/personal/download.html" class="channel-a">下载</a>
+        <a href="../../page/personal/about-us.html" class="channel-a">关于我们</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="register">
+        <div class="type">
+          <a href="javascript:;" class="person active">
+            <i></i>
+            <span>个人账户</span>
+          </a>
+          <a href="javascript:;" class="company">
+            <i></i>
+            <span>企业账户</span>
+            <p>(暂未开通)</p>
+          </a>
+        </div>
+        <div class="content">
+          <div class="phone">
+            <span> 手 机 号 码</span>
+            <input type="text" id="phone" onblur="register.checkPhone(this)" oninput="register.openSmsBtn(this);register.checkCanRegiter()"
+              placeholder="请输入你的手机号" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/">
+            <i></i>
+            <div class="tip">
+              请输入正确的手机号
+            </div>
+          </div>
+          <div class="sms">
+            <span>手机验证码</span>
+            <input type="text" oninput="register.checkCanRegiter()" id="ValidCode" maxlength="6" onblur="register.checkSms(this)" placeholder="请输入你的验证码">
+            <i></i>
+            <div class="tip">
+              验证码不正确
+            </div>
+            <a href="javascript:;" id="smsBtn" onclick="register.sendSms(this)">获取验证码</a>
+          </div>
+          <div class="psw">
+            <span> 设 置 密 码</span>
+            <input type="password" oninput="register.checkCanRegiter()" onblur="register.checkPsw(this)" max="30" id="psw" placeholder="请输入密码">
+            <i></i>
+            <div class="tip">
+              请输入6-30位非汉字
+            </div>
+          </div>
+          <div class="cpsw">
+            <span> 确 认 密 码</span>
+            <input type="password" oninput="register.checkCanRegiter()" onblur="register.checkCpsw(this)" max="30" id="cpsw" placeholder="请再次输入密码">
+            <i></i>
+            <div class="tip">
+              两次密码输入不一致
+            </div>
+          </div>
+          <a href="javascript:;" onclick="register.register()">注 册</a>
+        </div>
+        <div class="commonTip">
+          <p></p>
+        </div>
+      </div>
+      <div class="tips">
+        <p>注册票税宝，开启您贴身的发票管家</p>
+        <div class="tip1">智能归集电子发票</div>
+        <hr>
+        <div class="tip2">一键储存</div>
+        <hr>
+        <div class="tip3">在家也能报销</div>
+      </div>
+    </div>
+    <div class="foot">
+      <p>Copyright © 2016-2018 广州湛蓝数据科技有限公司 版权所有</p>
+      <p>
+        <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18023998号</a>
+      </p>
+    </div>
+  </div>
+  <script src="../../js/register.js"></script>
+</body>
+
+</html>

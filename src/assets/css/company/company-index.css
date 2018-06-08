@@ -1,0 +1,251 @@
+.wrap {
+    min-width: 1300px;
+    overflow: hidden;
+}
+
+.wrap>.content>.bg {}
+
+.main-menu>ul {
+    width: 522px;
+}
+
+.main-menu>ul>li {
+    position: relative;
+}
+
+.main-menu>ul>li:first-child:hover .product {
+    display: block;
+}
+
+.main-menu>ul>li>.product {
+    display: none;
+    position: absolute;
+    width: 116px;
+    line-height: 0;
+    top: 70px;
+    left: 50px;
+    padding-top: 10px;
+}
+
+.main-menu>ul>li>.product>a {
+    background-color: rgba(248, 248, 248, 0.9);
+    opacity: 0.9;
+    height: 35px;
+    display: inline-block;
+    width: 100%;
+    line-height: 35px;
+    font-size: 12px;
+    color: #333;
+}
+
+.main-menu>ul>li>.product>a:hover {
+    background-color: #c4d8f4;
+    color: #3b8cff;
+}
+
+.main-menu>ul>li>.product>.active {
+    color: #3b8cff;
+}
+
+.wrap>.content>.bg>img {
+    height: auto;
+    width: 100vw;
+    min-width: 1300px;
+}
+
+.wrap>.content>p {
+    color: #3b8bfd;
+    font-size: 12px;
+}
+
+.wrap>.content>.func a {
+    color: #3b8bfd;
+    font-size: 14px;
+    position: absolute;
+    top: -52px;
+    left: 0;
+    width: 446px;
+    padding-left: 16px;
+    background: url("../../images//company/china.png") left center no-repeat;
+}
+
+.wrap>.content>.func {
+    margin-top: 79px;
+    text-align: center;
+    min-width: 1492px;
+}
+
+.wrap>.content>.func>div {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 240px;
+    border-radius: 10px;
+    border: solid 1px #e7e7e7;
+    margin-right: 51px;
+    margin-bottom: 30px;
+}
+
+.wrap>.content>.func>div>.title {
+    color: #333;
+    font-size: 18px;
+}
+
+.wrap>.content>.func>div>.content {
+    color: #9a9a9a;
+    font-size: 12px;
+    margin: 5px 20px;
+}
+
+.wrap>.content>.func>div>div {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 25px auto;
+}
+
+.wrap>.content>.func>div:hover {
+    box-shadow: 1px 1px 12px 0px rgba(2, 2, 2, 0.08);
+}
+
+.wrap>.content>.func>div:hover>.title {
+    color: #08a8fe;
+}
+
+.wrap>.content>.func>div:hover>.content {
+    color: #08a8fe;
+}
+
+.wrap>.content>.func>.admin>div {
+    background: url("../../images/company/btn_admin_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.count>div {
+    background: url("../../images/company/btn_statistics_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.filtrate>div {
+    background: url("../../images/company/btn_filtrate_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.account>div {
+    background: url("../../images/company/btn_account_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.authenticate>div {
+    background: url("../../images/company/btn_authenticate_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.private>div {
+    background: url("../../images/company/btn_private_cloud_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.func>.private {
+    margin-right: 0;
+}
+
+.wrap>.content>.OA {
+    height: 588px;
+    background: url("../../images/partner/bg.png") center center no-repeat;
+    background-color: #f6f6f7;
+}
+
+.wrap>.content>.OA>.title {
+    text-align: center;
+    font-size: #000;
+    font-size: 32px;
+    padding-top: 34px;
+}
+
+.wrap>.content>.OA>.underline {
+    width: 64px;
+    height: 0;
+    border: 1px solid #108EE9;
+    margin: 0 auto;
+    margin-top: 7px;
+    margin-bottom: 39px;
+}
+
+.wrap>.content>.OA>.content {
+    text-align: center;
+    min-width: 1472px;
+}
+
+.wrap>.content>.OA>.content>div {
+    display: inline-block;
+    width: 358px;
+    height: 286px;
+    background-color: #fff;
+    margin-right: 5px;
+    box-shadow: 0px 0px 16px rgba(2, 2, 2, 0.08);
+    border: 1px solid #fff;
+}
+
+.wrap>.content>.OA>.content>div:hover {
+    border: 1px solid #b0cff5;
+}
+
+.wrap>.content>.OA>.content>div:last-child {
+    margin-right: 0;
+}
+
+.wrap>.content>.OA>.content>.yanhuang {
+    background: #fff url("../../images/company/yanhuang.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.OA>.content>.zhongruan {
+    background: #fff url("../../images/company/zhongruan.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.OA>.content>.jinghua {
+    background: #fff url("../../images/company/jinghua.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.OA>.content>.pingao {
+    background: #fff url("../../images/company/pingao.png") center 81px no-repeat;
+    background-size: 160px 60px;
+}
+
+.wrap>.content>.OA>.content>div>.name {
+    margin-top: 174px;
+    font-size: 23px;
+}
+
+.wrap>.content>.OA>.content>div>.desc {
+    font-size: 13px;
+    color: #888;
+    margin-top: 13px;
+}
+
+.foot {
+    margin-top: 0;
+}
+
+/* 登录 */
+
+.main-menu>div {
+    position: absolute;
+    right: 0;
+    height: 28px;
+    top: 22px;
+    line-height: 0;
+}
+
+.main-menu>div>.login {
+    width: 84px;
+    height: 28px;
+    background-color: #3b8cff;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.main-menu>div>.register {
+    font-size: 12px;
+    color: #3b8cff;
+    margin-left: 10px;
+}

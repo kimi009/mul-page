@@ -1,0 +1,117 @@
+body {
+    background-color: #f6f6f7;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.wrap>.content>.platform {}
+
+.wrap>.content>.platform>.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap>.content>.platform>.content>p {
+    font-size: 24px;
+    padding-left: 25px;
+    background: url("../../images/company/type@3x.png") left center no-repeat;
+    background-size: 12px 22px;
+    margin-bottom: 19px;
+    margin-top: 28px;
+}
+
+.wrap>.content>.platform>.content>div {
+    display: inline-block;
+    width: 286px;
+    height: 228px;
+    margin-right: 11px;
+    border: 1px solid #fff;
+}
+
+.wrap>.content>.platform>.content>div:hover {
+    border: 1px solid #3d8ae7;
+}
+
+.wrap>.content>.platform>.content>.weixin {
+    background: #fff url("../../images/collect/weixin.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.zhifubao {
+    background: #fff url("../../images/collect/zhifubao.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.jingdong {
+    background: #fff url("../../images/collect/jingdong.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.didi {
+    background: #fff url("../../images/collect/didi.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.tongcheng {
+    background: #fff url("../../images/collect/tongcheng.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.shenzhou {
+    background: #fff url("../../images/collect/shenzhou.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.zhonghang {
+    background: #fff url("../../images/collect/zhonghang.png") center 59px no-repeat;
+    background-size: 72px 72px;
+    margin-right: 0;
+}
+
+.wrap>.content>.platform>.content>.rujia {
+    background: #fff url("../../images/collect/rujia.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.qitian {
+    background: #fff url("../../images/collect/qitian.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.xiecheng {
+    background: #fff url("../../images/collect/xiecheng.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.wanda {
+    background: #fff url("../../images/collect/wanda.png") center 59px no-repeat;
+    background-size: 72px 72px;
+    margin-right: 0;
+}
+
+.wrap>.content>.platform>.content>.weipinhui {
+    background: #fff url("../../images/collect/weipinhui.png") center 59px no-repeat;
+    background-size: 72px 72px;
+}
+
+.wrap>.content>.platform>.content>.yamaxun {
+    background: #fff url("../../images/collect/yamaxun.png") center 59px no-repeat;
+    background-size: 72px 72px;
+    margin-right: 0;
+}
+
+.wrap>.content>.platform>.content>div>.name {
+    color: #000;
+    text-align: center;
+    margin-top: 138px;
+    font-size: 18px;
+}
+
+.wrap>.content>.platform>.content>div>.desc {
+    color: #999;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 14px;
+}

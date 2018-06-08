@@ -1,0 +1,84 @@
+.bg-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/personal/beijing6.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 1;
+}
+
+.main-content {
+    position: absolute;
+    z-index: 3;
+    width: 1200px;
+    height: 280px;
+    margin-left: -600px;
+    left: 50%;
+    top: 50%;
+    margin-top: -140px;
+}
+
+.words {
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+.follow-us-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 95px;
+}
+
+.follow-us-img2 {
+    display: block;
+    position: absolute;
+    right: 192px;
+    top: 95px;
+}
+
+.enter {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+
+.enter a {
+    font-size: 13px;
+    display: inline-block;
+    width: 124px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #53a1f3;
+}
+
+.login-top {
+    position: relative;
+    top: 22px;
+    z-index: 1;
+    display: none;
+}
+
+.login-top a:first-child {
+    display: inline-block;
+    width: 84px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #53a1f3;
+}
+
+.login-top a:first-child+a {
+    margin-left: 10px;
+    color: #53a1f3;
+}

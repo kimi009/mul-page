@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    min-width: 1300px;
+    background-color: #f8f8f8;
+    height: 100vh;
+}
+
+.wrap>.header {
+    background-color: #fff;
+}
+
+.wrap>.header>.main-menu {
+    line-height: 72px;
+}
+
+.wrap>.header>.main-menu>a {
+    margin-left: 91px;
+    font-size: 13px;
+    color: #333;
+}
+
+.wrap>.header>.main-menu>a:first-child {
+    margin-left: 825px;
+}
+
+.wrap>.header>.title {
+    font-size: 24px;
+    color: #666;
+    margin-left: 510px;
+    line-height: 72px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrap>.header>.title>span:first-child {
+    width: 0;
+    border-left: 1px solid #999;
+    display: inline-block;
+    height: 38px;
+    position: relative;
+    top: 12px;
+}
+
+.wrap>.header>.title>span:first-child+span {
+    margin-left: 12px;
+}
+
+.psb-logo {
+    background-image: url("../images/personal/logo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 40px;
+    width: 132px;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    margin-left: 360px;
+    cursor: pointer;
+}
+
+.wrap>.content {
+    margin: 92px auto;
+    display: flex;
+}

@@ -1,0 +1,247 @@
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6
+}
+
+input, textarea, button, a {
+    outline: 0
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, textarea {
+    margin: 0
+}
+
+fieldset, legend, textarea, input {
+    padding: 0
+}
+
+ul, ol {
+    padding-left: 0;
+    list-style-type: none
+}
+
+a img, fieldset {
+    border: 0
+}
+
+.toast_tips
+{
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    z-index: 100000000;
+    background-color: #55c42f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.success
+{
+    background-color: #55c42f;
+}
+
+.error
+{
+    background-color: #e45555
+;
+}
+.warning
+{
+    background-color: orange;
+}
+
+.bg-alpha
+{
+    position: fixed;
+    z-index: 199999;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(000,000,000,.2);
+    text-align: center;
+}
+
+.bg-alpha .mask-toast
+{
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    max-width: 550px;
+    z-index: 200000;
+    padding: 23px 40px;
+}
+
+.bg-alpha .mask-toast .main-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bg-alpha .mask-toast .toast-tip
+{
+    color: #333;
+    z-index: 200001;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.bg-alpha .mask-toast .main-close .close
+{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: -2px !important;
+    right: -2px !important;
+    cursor: pointer;
+}
+
+.line-1 {
+    width: 15px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #a0a0a0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 200003;
+}
+
+.line-2 {
+    width: 15px;
+    height: 3px;
+    border-radius: 1px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    background-color: #a0a0a0;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    z-index: 200004;
+}
+
+/*加载*/
+.jtoast-loading
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.loadEffect{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+    /*background-color: grey;*/
+}
+.loadEffect span{
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    background: #3b8bfd;
+    position: absolute;
+    -webkit-animation: load 1.04s ease infinite;
+}
+@-webkit-keyframes load{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+.loadEffect span:nth-child(1){
+    left: 50%;
+    top: 50%;
+    margin-left: -18px;
+    -webkit-animation-delay:0.13s;
+    /*background-color: red;*/
+}
+.loadEffect span:nth-child(2){
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -10px;
+    -webkit-transform: rotate(45deg);
+    -webkit-animation-delay:0.26s;
+    /*background-color: orange;*/
+}
+.loadEffect span:nth-child(3){
+    left: 50%;
+    top: 50%;
+    margin-top: -14px;
+    margin-left: -5px;
+    -webkit-transform: rotate(90deg);
+    -webkit-animation-delay:0.39s;
+    /*background-color: yellow;*/
+}
+.loadEffect span:nth-child(4){
+    top: 50%;
+    right:50%;
+    margin-right: -14px;
+    margin-top: -10px;
+    -webkit-transform: rotate(135deg);
+    -webkit-animation-delay:0.52s;
+    /*background-color: green;*/
+}
+.loadEffect span:nth-child(5){
+    right: 50%;
+    top: 50%;
+    margin-right: -18px;
+    -webkit-transform: rotate(180deg);
+    -webkit-animation-delay:0.65s;
+    /*background-color: blue;*/
+}
+.loadEffect span:nth-child(6){
+    right: 50%;
+    bottom:50%;
+    margin-right: -13px;
+    margin-bottom: -10px;
+    -webkit-transform: rotate(225deg);
+    -webkit-animation-delay:0.78s;
+    /*background-color: indianred;*/
+}
+.loadEffect span:nth-child(7){
+    bottom: 50%;
+    left: 50%;
+    margin-left: -5px;
+    margin-bottom: -15px;
+    -webkit-transform: rotate(270deg);
+    -webkit-animation-delay:0.91s;
+    /*background-color: purple;*/
+}
+.loadEffect span:nth-child(8){
+    bottom: 50%;
+    left: 50%;
+    margin-bottom: -10px;
+    margin-left: -15px;
+    -webkit-transform: rotate(315deg);
+    -webkit-animation-delay:1.04s;
+    /*background-color: cyan;*/
+}

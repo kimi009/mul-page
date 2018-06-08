@@ -1,0 +1,145 @@
+.header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    min-width: 1300px;
+}
+
+.header .am-header-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.header .laymid {
+    text-align: center;
+    position: relative;
+    width: 1196px;
+    margin: 0 auto;
+}
+
+/*导航状态栏*/
+
+.top-nav {
+    height: 25px;
+    line-height: 25px;
+}
+
+.header .top-nav .laymid,
+.top-nav {
+    background: #1e1b29 none repeat scroll 0 0;
+}
+
+.top-nav,
+.top-nav a,
+.top-nav span {
+    font-size: 12px;
+    font-family: "Microsoft YaHei" !important;
+    color: white;
+}
+
+.fl {
+    float: left !important;
+}
+
+.top-nav li {
+    float: left;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.top-nav li:first-child {
+    margin-left: 0;
+}
+
+.top-nav li.first-a {
+    margin-left: 0 !important;
+}
+
+.top-nav a:hover,
+.top-nav .on a {
+    color: #3b8bfd;
+    cursor: pointer;
+}
+
+/*主导航*/
+
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.psb-logo {
+    background-image: url("../../images/personal/logo.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 40px;
+    width: 132px;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    cursor: pointer;
+}
+
+.main-nav,
+.main-menu {
+    height: 72px;
+    border-bottom: 1px solid #E9F6FD;
+}
+
+.main-menu {
+    text-align: center;
+    min-width: 1300px;
+}
+
+.main-menu>ul {
+    margin: 0 auto;
+    width: 382px;
+}
+
+.main-menu>ul>li {
+    z-index: 2;
+}
+
+.channel {
+    float: left;
+    height: 72px;
+    line-height: 72px;
+    position: relative;
+}
+
+.channel-a:hover,
+.main-menu .on .channel-a {
+    color: #3b8bfd;
+}
+
+.channel .channel-a {
+    display: block;
+    font-size: 14px;
+    padding: 0 45px;
+    color: #333333;
+    font-family: "Microsoft YaHei" !important;
+}
+
+/* username */
+
+.header .laymid>.user {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+
+.header .laymid>.user>span:first-child+span+span {
+    display: inline-block;
+    height: 16px;
+    width: 0;
+    border-left: 1px solid #fff;
+    margin: 0 12px;
+    position: relative;
+    top: 4px;
+}

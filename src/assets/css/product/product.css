@@ -1,0 +1,183 @@
+.foot {
+    background-color: #313131;
+    margin: 0;
+}
+
+.foot>p>a:hover {
+    color: #dadada;
+}
+
+.about {
+    border-bottom: 1px solid #434343;
+    background-color: #313131;
+}
+
+.about>.content {
+    width: 1061px;
+    margin: 0 auto;
+    height: 164px;
+    padding-top: 56px;
+    display: flex;
+}
+
+.about>.content>div {
+    display: inline-block;
+}
+
+.about>.content>.left>.download {
+    margin-top: 26px;
+}
+
+.about>.content>.left>.download>a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+}
+
+.about>.content>.left>.download>.weixin {
+    background: url("../../images/index/weixin.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.weibo {
+    background: url("../../images/index/weibo.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.dingding {
+    background: url("../../images/index/dingding.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.qiyeweixin {
+    background: url("../../images/index/qiyeweixin.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.ios {
+    width: 64px;
+    background: url("../../images/index/ios@3x.png") center center no-repeat;
+    background-size: 64px 28px;
+}
+
+.about>.content>.left>.download>.android {
+    width: 64px;
+    background: url("../../images/index/android.png") center center no-repeat;
+    background-size: 64px 28px;
+}
+
+.about>.content>.mid {
+    width: 138px;
+    margin-left: 208px;
+    color: #909090;
+}
+
+.about>.content>.mid>div {
+    margin-top: 25px;
+}
+
+.about>.content>.mid>div>a {
+    display: inline-block;
+    height: 24px;
+}
+
+.about>.content>.mid>div>.yanhuang {
+    background: url("../../images/index/yanhuang.png") center center no-repeat;
+    width: 78px;
+    background-size: 78px 24px;
+}
+
+.about>.content>.mid>div>.jinghua {
+    background: url("../../images/index/jinghua.png") center center no-repeat;
+    width: 24px;
+    background-size: 24px 24px;
+    margin-left: 23px;
+}
+
+.about>.content>.mid>div>.zhongruan {
+    background: url("../../images/index/zhongruan.png") center center no-repeat;
+    width: 56px;
+    background-size: 56px 24px;
+    margin-top: 16px;
+}
+
+.about>.content>.mid>div>.pingao {
+    background: url("../../images/index/pingao.png") center center no-repeat;
+    width: 36px;
+    background-size: 36px 24px;
+    margin-left: 41px;
+    margin-top: 16px;
+}
+
+.about>.content>.right {
+    width: 220px;
+    margin-left: 200px;
+    color: #909090;
+}
+
+.about>.content>.right>div {
+    margin-top: 28px;
+}
+
+.about>.content>.right>div>a {
+    font-size: 13px;
+    color: #5d5d5d;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.about>.content>.right>div>a:nth-child(3) {
+    margin-right: 0;
+}
+
+.about>.content>.right>div>a:nth-child(4) {
+    margin-top: 26px;
+}
+
+.about>.content>.right>div>a:nth-child(5) {
+    margin-top: 26px;
+}
+
+.about>.content>.right>div>a:nth-child(6) {
+    margin-right: 0;
+    margin-top: 26px;
+}
+
+/* tab */
+
+.header .main-nav>.tab {
+    background-color: #E9F6FD;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    width: 100%;
+    bottom: -61px;
+    display: none;
+}
+
+.header .main-nav>.tab>a {
+    font-size: 16px;
+    color: #333;
+    margin-right: 80px;
+}
+
+.header .main-nav>.tab>a:last-child {
+    margin-right: 0;
+}
+
+.header .main-nav>.tab>.on {
+    color: #0596F3
+}
+
+/*  */
+
+.wrap {
+    min-width: 1330px;
+    overflow: hidden;
+}
+
+.wrap>.content>img {
+    width: 100vw;
+    min-width: 1330px;
+}

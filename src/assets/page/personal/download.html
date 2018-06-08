@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>下载</title>
+  <link href="../../css/base.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../css/foot.css">
+  <link href="../../css/personal/download.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../css/personal/person-nav.css" type="text/css">
+  <script src="../../plugins/jquery.min.js"></script>
+  <script src="../../js/common.js"></script>
+  <script src="../../js/api.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="am-header-inner">
+        <div class="top-nav">
+          <div class="laymid">
+            <ul class="fl">
+              <li class="on">
+                <a>个人版</a>
+              </li>
+              <li>
+                <a href="../../page/company/company-index.html">企业版</a>
+              </li>
+              <li>
+                <a href="../../page/platform/platform.html">开放平台</a>
+              </li>
+              <li>
+                <a href="../../page/collect/collect.html">票据收集</a>
+              </li>
+              <li>
+                <a href="../../page/partner/partner-index.html">合作伙伴</a>
+              </li>
+            </ul>
+            <p class="user">
+              <span>您好，</span>
+              <span></span>
+              <span></span>
+              <a href="javascript:;" onclick="logout()">退出</a>
+            </p>
+          </div>
+        </div>
+        <div class="main-nav">
+          <div class="laymid">
+            <div class="psb-logo" onclick="window.location.href='../../../index.html'"></div>
+            <div class="main-menu">
+              <ul>
+                <li class="channel">
+                  <a href="../../page/personal/personal-index.html" class="channel-a">首页</a>
+                </li>
+                <li class="channel on">
+                  <a href="../../page/personal/download.html" class="channel-a">下载</a>
+                </li>
+                <li class="channel">
+                  <a href="../../page/personal/about-us.html" class="channel-a">关于我们</a>
+                </li>
+              </ul>
+              <div class="enter">
+                <a href="javascript:;" onclick="enterPsb();">进入我的票税宝</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-page"></div>
+    <div class="main-content">
+      <img class="words" src="../../images/personal/slogan7.png">
+      <img class="follow-us-img" src="../../images/personal/follow_us.png">
+      <img class="follow-us-img2" src="../../images/personal/download.png">
+    </div>
+    <div class="foot" style="z-index: 3; position: absolute; bottom:0; width: 100%">
+      <p>Copyright © 2016-2018 广州湛蓝数据科技有限公司 版权所有</p>
+      <p>
+        <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18023998号</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    $(function () {
+      //判断是否已经登录
+      common.postdata.Token = localStorage.getItem("token");
+      var url = common.ApiPath + api.GetMemberDetail;
+      if (common.postdata.Token) {
+        common.DoAjax(url, common.postdata, function (data) {
+          console.log(data);
+          if (data.ResCode === 1000) {
+            $(".laymid>.user>span:eq(1)").text(data.Data.NickName);
+            $(".laymid>.user").show();
+            $(".login-mid").remove();
+            $(".login-top").remove();
+            $(".enter").css("display", "inline-block");
+          }
+        })
+      }
+    })
+    // 退出
+    function logout() {
+      localStorage.setItem("token", "");
+      var url = common.ApiPath + api.LoginOut;
+      common.DoAjax(url, common.postdata, function (data) {
+        console.log(data);
+        if (data.ResCode === 1000) {
+          location.reload();
+        } else {
+          jToast().showToastWithClose(data.Msg);
+        }
+      })
+    }
+    // 进入我的票税宝
+    function enterPsb() {
+      window.location.href = common.PsbPath + "#/?token=" + localStorage.getItem("token");
+    }
+  </script>
+</body>
+
+</html>

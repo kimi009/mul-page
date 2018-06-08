@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    min-width: 1300px;
+    overflow: auto;
+}
+
+.am-page,
+.am-body,
+.am-bg {
+    height: 100%;
+    width: 100%;
+}
+
+.am-body {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.am-page {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.am-page,
+.am-bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-width: 1300px;
+}
+
+.am-bg {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+}
+
+.main-content {
+    position: relative;
+    z-index: 9;
+    text-align: center;
+}
+
+.main-content {
+    height: 100%;
+    margin: 0 auto;
+    width: 1200px;
+    text-align: left;
+}
+
+.words {
+    position: absolute;
+}
+
+.view1 .words {
+    left: 35.5%;
+    top: 38.5%;
+}
+
+.view2 .words {
+    left: 0;
+    top: 38%;
+}
+
+.view3 .words {
+    right: 0;
+    top: 38%;
+}
+
+.view4 .words {
+    left: 0;
+    top: 38%;
+}
+
+.view5 .words {
+    left: 0;
+    top: 38%;
+}
+
+.first {
+    background-image: url("../../images/personal/beijing.jpg");
+    visibility: visible;
+}
+
+.second {
+    visibility: visible;
+    background-image: url("../../images/personal/beijing2.jpg");
+}
+
+.third {
+    visibility: visible;
+    background-image: url("../../images/personal/beijing3.jpg");
+}
+
+.fourth {
+    visibility: visible;
+    background-image: url("../../images/personal/beijing4.jpg");
+}
+
+.fifth {
+    visibility: visible;
+    background-image: url("../../images/personal/beijing5.jpg");
+}
+
+/*点击滚动图片*/
+
+.onepage-pagination {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    z-index: 4;
+}
+
+.onepage-pagination a {
+    padding: 8px;
+}
+
+.onepage-pagination a,
+.onepage-pagination .dotted {
+    display: block;
+    height: 10px;
+    width: 10px;
+}
+
+.onepage-pagination .dotted {
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    transition: all 500ms ease 0s;
+}
+
+.onepage-pagination a,
+.onepage-pagination .dotted {
+    display: block;
+    height: 10px;
+    width: 10px;
+}
+
+.active .dotted {
+    background-color: white;
+}
+
+/* login */
+
+.wrap .login-mid {
+    position: absolute;
+    top: 508px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.wrap .login-mid a {
+    display: inline-block;
+    width: 158px;
+    height: 30px;
+    line-height: 32px;
+    border-radius: 1px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    color: #fff;
+}
+
+.wrap .login-mid a:first-child {
+    background-color: #fff;
+    color: #0096f0;
+}
+
+.wrap .login-mid a:first-child+a {
+    margin-left: 16px;
+}
+
+.login-top {
+    position: relative;
+    top: 22px;
+    z-index: 1;
+    display: none;
+}
+
+.login-top a:first-child {
+    display: inline-block;
+    width: 84px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #53a1f3;
+}
+
+.login-top a:first-child+a {
+    margin-left: 10px;
+    color: #53a1f3;
+}
+
+.enter {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+
+.enter a {
+    font-size: 13px;
+    display: inline-block;
+    width: 124px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #53a1f3;
+}
+
+/* modal-login */
+
+.modal-login {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    min-width: 1300px;
+    display: none;
+}
+
+.modal-login>.content {
+    width: 218px;
+    height: 235px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: 0 auto;
+    position: relative;
+    top: 32%;
+    padding: 26px 34px 34px 34px;
+}
+
+.modal-login>.content>p {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.modal-login .content>div {
+    width: 219px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.modal-login .content>.tip {
+    width: 195px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #333;
+    background-color: #fdeee9;
+    border-radius: 4px;
+    border: solid 1px #fadcd3;
+    position: absolute;
+    top: 32px;
+    left: 34px;
+    padding: 0 12px;
+    display: none;
+    overflow: hidden;
+}
+
+.modal-login>.content>.account {
+    margin-top: 16px;
+}
+
+.modal-login>.content>.psw {
+    margin-top: 10px;
+}
+
+.modal-login>.content>div>input {
+    height: 100%;
+    padding: 0 30px 0 48px;
+    width: 141px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-login>.content>div>.ico {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #cacfcf;
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+}
+
+.modal-login>.content>div>.userico {
+    background: #cacfcf url("../../images/personal/ico_user.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.pswico {
+    background: #cacfcf url("../../images/personal/ico_password.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.close {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    font-style: normal;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/personal/btn_close_normal.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+}
+
+.modal-login>.content>div>.close:hover {
+    background: url("../../images/personal/btn_close_highlight.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.close:active {
+    background: url("../../images/personal/btn_close_down.png") center center no-repeat;
+}
+
+.modal-login>.content>.forget {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.modal-login>.content>.forget:hover {
+    color: #38adff;
+}
+
+.modal-login>.content>.login-btn {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #38adff;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.modal-login>.content>.register-btn {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    color: #38adff;
+    margin: 0;
+}
+
+.modal-login>.content>.register-btn:hover {
+    color: #2592df;
+}
+
+.modal-login>.content>.close {
+    color: #aaabab;
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/personal/btn_close2_normal.png") center center no-repeat;
+    left: 6px;
+    top: 6px;
+}
+
+.modal-login>.content>.close:hover {
+    background: url("../../images/personal/btn_close2_highlight.png") center center no-repeat;
+}
+
+.modal-login>.content>.close:active {
+    background: url("../../images/personal/btn_close2_down.png") center center no-repeat;
+}
+
+.modal-login>.content>.way {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../../images/personal/ico_register.png") center center no-repeat;
+}
+
+.modal-login>.content>.way.active {
+    background: url("../../images/personal/ico_QR_code.png") center center no-repeat;
+}

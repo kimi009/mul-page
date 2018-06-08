@@ -1,0 +1,484 @@
+.wrap {
+    min-width: 1300px;
+    overflow: hidden;
+}
+
+.wrap>.content>.bg>img {
+    width: 100vw;
+    height: auto;
+    min-width: 1300px;
+}
+
+.wrap>.content>.business>.title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 29px;
+}
+
+.wrap>.content>.business {
+    height: 493px;
+}
+
+.wrap>.content>.business>.content {
+    width: 1240px;
+    height: 329px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.wrap>.content>.business>.content>div {
+    width: 600px;
+    height: 329px;
+    display: inline-block;
+    box-shadow: 0px 0px 16px 0px rgba(2, 2, 2, 0.08);
+    border-radius: 8px;
+    margin-top: 52px;
+}
+
+.wrap>.content>.business>.content>div:first-child {
+    margin-right: 40px;
+    background: url("../../images/partner/bg3.png") top center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div {
+    background: url("../../images/partner/bg4.png") top center no-repeat;
+}
+
+.wrap>.content>.business>.content>div>.title {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wrap>.content>.business>.content>div>.content {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.wrap>.content>.business>.content>div>.func {
+    display: flex;
+    height: 189px;
+    margin: 34px 40px 0 40px;
+}
+
+.wrap>.content>.business>.content>div>.func>div {
+    display: inline-block;
+    margin-top: 45px;
+    text-align: center;
+    width: 112px;
+    margin-right: 24px;
+}
+
+.wrap>.content>.business>.content>div>.func>div:last-child {
+    margin-right: 0px;
+}
+
+.wrap>.content>.business>.content>div>.func>div>i {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child>i {
+    background: url("../../images/partner/btn_connector_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child:hover>i {
+    background: url("../../images/partner/btn_connector_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div>i {
+    background: url("../../images/partner/btn_cooperation_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div:hover>i {
+    background: url("../../images/partner/btn_cooperation_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div+div>i {
+    background: url("../../images/partner/btn_support_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div+div:hover>i {
+    background: url("../../images/partner/btn_support_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div+div+div>i {
+    background: url("../../images/partner/btn_customization_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child>.func>div:first-child+div+div+div:hover>i {
+    background: url("../../images/partner/btn_customization_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child>i {
+    background: url("../../images/partner/btn_resource_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child:hover>i {
+    background: url("../../images/partner/btn_resource_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div>i {
+    background: url("../../images/partner/btn_appreciation_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div:hover>i {
+    background: url("../../images/partner/btn_appreciation_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div+div>i {
+    background: url("../../images/partner/btn_trademark_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div+div:hover>i {
+    background: url("../../images/partner/btn_trademark_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div+div+div>i {
+    background: url("../../images/partner/btn_industry_normal.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div:first-child+div>.func>div:first-child+div+div+div:hover>i {
+    background: url("../../images/partner/btn_industry_highlight.png") center center no-repeat;
+}
+
+.wrap>.content>.business>.content>div>.func>div>p {
+    color: #333;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.wrap>.content>.business>.content>div>.func>div:hover p {
+    color: #29abe2;
+}
+
+.wrap>.content>.platform {
+    height: 558px;
+    background: #f6f6f7 url("../../images/partner/bg.png") center center no-repeat;
+    padding-top: 31px;
+}
+
+.wrap>.content>.platform>.title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 6px;
+}
+
+.wrap>.content>.platform>.underline {
+    width: 64px;
+    border: 1px solid #108ee9;
+    margin: 0 auto;
+    margin-top: 7px;
+}
+
+.wrap>.content>.platform>.content {
+    text-align: center;
+    margin-top: 39px;
+}
+
+.wrap>.content>.platform>.content>div {
+    width: 406px;
+    height: 325px;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 16px 0px rgba(2, 2, 2, 0.08);
+    margin-right: 7px;
+}
+
+.wrap>.content>.platform>.content>div:first-child {
+    background: #fff url("../../images/partner/ico_h5.png") center 82px no-repeat;
+}
+
+.wrap>.content>.platform>.content>div:first-child+div {
+    background: #fff url("../../images/partner/ico_web.png") center 82px no-repeat;
+}
+
+.wrap>.content>.platform>.content>div:last-child {
+    margin-right: 0;
+    background: #fff url("../../images/partner/ico_app.png") center 82px no-repeat;
+}
+
+.wrap>.content>.platform>.content>div>.title {
+    font-size: 23px;
+    text-align: center;
+    margin-top: 167px;
+}
+
+.wrap>.content>.platform>.content>div>.content {
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.wrap>.content>.ability {
+    height: 1024px;
+    background: #fff url("../../images/partner/bg2.png") 164px 48px no-repeat;
+}
+
+.wrap>.content>.ability>.title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 36px;
+}
+
+.wrap>.content>.ability>.underline {
+    width: 64px;
+    border: 1px solid #108ee9;
+    margin: 0 auto;
+    margin-top: 7px;
+    margin-bottom: 48px;
+}
+
+.wrap>.content>.ability>.content {
+    width: 1240px;
+    height: 620px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.wrap>.content>.ability>.content>div {
+    width: 310px;
+    height: 310px;
+    float: left;
+}
+
+.wrap>.content>.ability>.content>div:first-child {
+    background: url("../../images/partner/1.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div {
+    background: url("../../images/partner/2.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div {
+    background: url("../../images/partner/3.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div {
+    background: url("../../images/partner/4.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div {
+    background: url("../../images/partner/5.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div {
+    background: url("../../images/partner/6.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div+div {
+    background: url("../../images/partner/7.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div+div+div {
+    background: url("../../images/partner/8.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div {
+    text-align: center;
+    position: relative;
+}
+
+.wrap>.content>.ability>.content>div>i {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-top: 74px;
+}
+
+.wrap>.content>.ability>.content>div:first-child>i {
+    background: url("../../images/partner/ico_transaction.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div>i {
+    background: url("../../images/partner/ico_gather.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div>i {
+    background: url("../../images/partner/ico_administration.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div>i {
+    background: url("../../images/partner/ico_zoology.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div>i {
+    background: url("../../images/partner/ico_appreciation.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div>i {
+    background: url("../../images/partner/ico_configuration.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div+div>i {
+    background: url("../../images/partner/ico_safety.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div:first-child+div+div+div+div+div+div+div>i {
+    background: url("../../images/partner/ico_date.png") center center no-repeat;
+}
+
+.wrap>.content>.ability>.content>div>p {
+    color: #fff;
+    text-align: center;
+}
+
+.wrap>.content>.ability>.content>div>.title {
+    font-size: 31px;
+    margin-top: 1px;
+}
+
+.wrap>.content>.ability>.content>div>.content {
+    font-size: 16px;
+}
+
+.wrap>.content>.ability>.content>.clearfix {
+    clear: both;
+    width: 0;
+    height: 0;
+    float: none;
+}
+
+.wrap>.content>.ability>.content>a {
+    width: 280px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    background-color: #108ee9;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 91px;
+}
+
+.wrap>.content>.ability>.content>div>.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 126, 243, 0.8);
+    text-align: left;
+    overflow: hidden;
+}
+
+.wrap>.content>.ability>.content>div>.layer>.title {
+    margin: 39px 35px 5px 35px;
+    font-size: 33px;
+    color: #ffffff;
+    width: 240px;
+}
+
+.wrap>.content>.ability>.content>div>.layer>.underline {
+    width: 56px;
+    height: 1px;
+    border: 1px solid #fec116;
+    border-radius: 1px;
+    background-color: #fec116;
+    margin-left: 35px;
+}
+
+.wrap>.content>.ability>.content>div>.layer>.content {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 17px;
+    margin: 11px 35px 0 35px;
+    width: 240px;
+}
+
+.wrap>.content>.ability>.content>div>.layer>a {
+    display: inline-block;
+    font-size: 17px;
+    color: #ffffff;
+    margin: 31px 35px 0 35px;
+    width: 240px;
+}
+
+.wrap>.content>.ability>.content>div:hover>.layer {
+    width: 100%;
+    transition: .25s;
+}
+
+.wrap>.content>.ability>.content>div:hover>.title,
+.wrap>.content>.ability>.content>div:hover>.content,
+.wrap>.content>.ability>.content>div:hover>i {
+    display: none;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.modal>.content {
+    width: 280px;
+    height: 340px;
+    margin: 338px auto;
+    padding: 34px 100px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.modal>.content>.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.modal>.content>.underline {
+    width: 175px;
+    border: 1px solid #3d8ae7;
+    border-radius: 1px;
+    margin-top: 7px;
+}
+
+.modal>.content>.content {
+    margin-top: 21px;
+}
+
+.modal>.content>.content>p {
+    padding-left: 48px;
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+.modal>.content>.content>p:first-child {
+    background: url("../../images/partner/ico_home.png") 10px center no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p {
+    background: url("../../images/partner/ico_location.png") 10px 4px no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p+p {
+    background: url("../../images/partner/ico_call.png") 10px center no-repeat;
+}
+
+.modal>.content>.content>p:first-child+p+p+p {
+    background: url("../../images/partner/ico_email.png") 10px center no-repeat;
+}
+
+.modal>.content>a {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 36px;
+    background-color: #f15454;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 46px;
+}

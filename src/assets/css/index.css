@@ -1,0 +1,614 @@
+.clearfix {
+    clear: both;
+}
+
+.wrap {
+    min-width: 1330px;
+    overflow: hidden;
+    background-color: #f5f7f9;
+}
+
+.banner1 {
+    width: 100%;
+    position: relative;
+}
+
+.banner1 .banner1-img img {
+    width: 100vw;
+    min-width: 1330px;
+    min-height: 627.59px;
+    z-index: -1;
+}
+
+.banner1 .banner1-logo {
+    position: absolute;
+    left: 240px;
+    top: 24px;
+}
+
+.banner1 .banner1-logo i {
+    width: 132px;
+    height: 40px;
+    display: inline-block;
+    background: url(../images/index/index-logo.png) no-repeat;
+}
+
+.banner1 .banner1-login {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+}
+
+.banner1 .banner1-login>p {
+    color: #8f8f8f;
+    font-size: 12px;
+    margin-right: 240px;
+}
+
+.banner1 .banner1-login span a {
+    color: #fff;
+}
+
+.banner1 .banner1-login>p {
+    font-size: 12px;
+}
+
+.banner1 .banner1-login>p>span {
+    color: #fff;
+}
+
+.banner1 .banner1-login>p>a {
+    color: #fff;
+}
+
+.banner1 .banner1-login>.logined {
+    display: none;
+}
+
+.banner1 .banner1-login>p>.line {}
+
+.banner1 .banner1-login>p>.mypsb {
+    padding: 0 12px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    margin: 0 8px;
+}
+
+.banner1 .banner1-nav {
+    top: 50%;
+    margin: 0 auto;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    min-width: 1330px;
+}
+
+.banner1 .banner1-nav p {
+    height: 23px;
+    background: url("../images/index/font.png")center center no-repeat;
+}
+
+.banner1 .banner1-nav .content {
+    margin-top: 36px;
+}
+
+.banner1 .banner1-nav .content a {
+    width: 86px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 40px;
+    margin-right: 19px;
+    padding-left: 45px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.banner1 .banner1-nav .content a:first-child {
+    background: #01b1ed url("../images/index/man.png") 9px center no-repeat;
+}
+
+.banner1 .banner1-nav .content a:first-child+a {
+    background: #01b1ed url("../images/index/enterprise.png") 9px center no-repeat;
+}
+
+.banner1 .banner1-nav .content a:first-child+a+a {
+    background: #01b1ed url("../images/index/cooperation.png") 9px center no-repeat;
+}
+
+.banner1 .banner1-nav .content a:first-child+a+a+a {
+    background: #01b1ed url("../images/index/interconnect.png") 9px center no-repeat;
+}
+
+.banner1 .banner1-nav .content a:last-child {
+    margin-right: 0;
+}
+
+.banner2 {
+    margin-top: 64px;
+}
+
+.banner2 .banner2-title {}
+
+.banner2 .banner2-title h1 {
+    text-align: center;
+    color: #333;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.banner2 .banner2-offer {
+    float: left;
+    position: relative;
+    margin-top: 68px;
+    display: inline-block;
+    width: 19.592476489028213%;
+    border: 1px solid #c7c7c7;
+    margin-left: 24px;
+    background-color: #fff;
+}
+
+.banner2 .banner2-offer .offer-img img {
+    width: 100%;
+}
+
+.banner2 .banner2-offer h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.banner2 .banner2-offer p {
+    line-height: 24px;
+    margin: 18px 20px;
+    font-size: 16px;
+    color: #666;
+    text-indent: 2em;
+    height: 60px;
+}
+
+.banner2 .banner2-offer .offer-more {
+    position: relative;
+    margin: 72px 0px 24px 20px;
+}
+
+.banner2 .banner2-offer .offer-more i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -4px;
+    background: url(../images/index/ico_more.png) no-repeat;
+}
+
+.banner2 .banner2-offer .offer-more span {
+    margin-left: 32px;
+    font-size: 16px;
+    color: #3b6caa;
+}
+
+.banner3 img {
+    width: 100%;
+}
+
+.banner4 {
+    height: 420px;
+    background-color: #fff;
+    margin-top: 106px;
+    padding-top: 80px;
+}
+
+.banner4>div {
+    width: 1218px;
+    margin: 0 auto;
+}
+
+.banner4>div>div {
+    display: inline-block;
+    width: 520px;
+    height: 292px;
+    position: relative;
+    border-radius: 24px;
+}
+
+.banner4>div>.video1 {
+    background: url("../images/index/video1.png") top center no-repeat;
+    background-size: 520px 292px;
+}
+
+.banner4>div>.video2 {
+    margin-left: 173px;
+    background: url("../images/index/video2.png") top center no-repeat;
+    background-size: 520px 292px;
+}
+
+.banner4>div>div>p {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    position: absolute;
+    bottom: -64px;
+    width: 100%;
+}
+
+.banner4>div>div>i {
+    width: 108px;
+    height: 108px;
+    display: inline-block;
+    position: absolute;
+    top: 92px;
+    left: 207px;
+    background: url("../images/index/play.png") center center no-repeat;
+    background-size: 108px 108px;
+    cursor: pointer;
+}
+
+.about {
+    border-bottom: 1px solid #434343;
+    background-color: #313131;
+}
+
+.about>.content {
+    width: 1061px;
+    margin: 0 auto;
+    height: 164px;
+    padding-top: 56px;
+    display: flex;
+}
+
+.about>.content>div {
+    display: inline-block;
+}
+
+.about>.content>.left>.download {
+    margin-top: 26px;
+}
+
+.about>.content>.left>.download>a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+}
+
+.about>.content>.left>.download>.weixin {
+    background: url("../images/index/weixin.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.weibo {
+    background: url("../images/index/weibo.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.dingding {
+    background: url("../images/index/dingding.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.qiyeweixin {
+    background: url("../images/index/qiyeweixin.png") center center no-repeat;
+    background-size: 28px 28px;
+}
+
+.about>.content>.left>.download>.ios {
+    width: 64px;
+    background: url("../images/index/ios@3x.png") center center no-repeat;
+    background-size: 64px 28px;
+}
+
+.about>.content>.left>.download>.android {
+    width: 64px;
+    background: url("../images/index/android.png") center center no-repeat;
+    background-size: 64px 28px;
+}
+
+.about>.content>.mid {
+    width: 138px;
+    margin-left: 208px;
+    color: #909090;
+}
+
+.about>.content>.mid>div {
+    margin-top: 25px;
+}
+
+.about>.content>.mid>div>a {
+    display: inline-block;
+    height: 24px;
+}
+
+.about>.content>.mid>div>.yanhuang {
+    background: url("../images/index/yanhuang.png") center center no-repeat;
+    width: 78px;
+    background-size: 78px 24px;
+}
+
+.about>.content>.mid>div>.jinghua {
+    background: url("../images/index/jinghua.png") center center no-repeat;
+    width: 24px;
+    background-size: 24px 24px;
+    margin-left: 23px;
+}
+
+.about>.content>.mid>div>.zhongruan {
+    background: url("../images/index/zhongruan.png") center center no-repeat;
+    width: 56px;
+    background-size: 56px 24px;
+    margin-top: 16px;
+}
+
+.about>.content>.mid>div>.pingao {
+    background: url("../images/index/pingao.png") center center no-repeat;
+    width: 36px;
+    background-size: 36px 24px;
+    margin-left: 41px;
+    margin-top: 16px;
+}
+
+.about>.content>.right {
+    width: 220px;
+    margin-left: 200px;
+    color: #909090;
+}
+
+.about>.content>.right>div {
+    margin-top: 28px;
+}
+
+.about>.content>.right>div>a {
+    font-size: 13px;
+    color: #5d5d5d;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.about>.content>.right>div>a:nth-child(3) {
+    margin-right: 0;
+}
+
+.about>.content>.right>div>a:nth-child(4) {
+    margin-top: 26px;
+}
+
+.about>.content>.right>div>a:nth-child(5) {
+    margin-top: 26px;
+}
+
+.about>.content>.right>div>a:nth-child(6) {
+    margin-right: 0;
+    margin-top: 26px;
+}
+
+.foot {
+    background-color: #313131;
+    margin: 0;
+}
+
+/* modal-login */
+
+.modal-login {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    min-width: 1300px;
+    display: none;
+}
+
+.modal-login>.content {
+    width: 218px;
+    height: 235px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: 0 auto;
+    position: relative;
+    top: 32%;
+    padding: 26px 34px 34px 34px;
+}
+
+.modal-login>.content>p {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.modal-login .content>div {
+    width: 219px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.modal-login .content>.tip {
+    width: 195px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #333;
+    background-color: #fdeee9;
+    border-radius: 4px;
+    border: solid 1px #fadcd3;
+    position: absolute;
+    top: 32px;
+    left: 34px;
+    padding: 0 12px;
+    display: none;
+    overflow: hidden;
+}
+
+.modal-login>.content>.account {
+    margin-top: 16px;
+}
+
+.modal-login>.content>.psw {
+    margin-top: 10px;
+}
+
+.modal-login>.content>div>input {
+    height: 100%;
+    padding: 0 30px 0 48px;
+    width: 141px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-login>.content>div>.ico {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #cacfcf;
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+}
+
+.modal-login>.content>div>.userico {
+    background: #cacfcf url("../images/personal/ico_user.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.pswico {
+    background: #cacfcf url("../images/personal/ico_password.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.close {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    font-style: normal;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/personal/btn_close_normal.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+}
+
+.modal-login>.content>div>.close:hover {
+    background: url("../images/personal/btn_close_highlight.png") center center no-repeat;
+}
+
+.modal-login>.content>div>.close:active {
+    background: url("../images/personal/btn_close_down.png") center center no-repeat;
+}
+
+.modal-login>.content>.forget {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.modal-login>.content>.forget:hover {
+    color: #38adff;
+}
+
+.modal-login>.content>.login-btn {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #38adff;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.modal-login>.content>.register-btn {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    color: #38adff;
+    margin: 0;
+}
+
+.modal-login>.content>.register-btn:hover {
+    color: #2592df;
+}
+
+.modal-login>.content>.close {
+    color: #aaabab;
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/personal/btn_close2_normal.png") center center no-repeat;
+    left: 6px;
+    top: 6px;
+}
+
+.modal-login>.content>.close:hover {
+    background: url("../images/personal/btn_close2_highlight.png") center center no-repeat;
+}
+
+.modal-login>.content>.close:active {
+    background: url("../images/personal/btn_close2_down.png") center center no-repeat;
+}
+
+.modal-login>.content>.way {
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/personal/ico_register.png") center center no-repeat;
+}
+
+.modal-login>.content>.way.active {
+    background: url("../images/personal/ico_QR_code.png") center center no-repeat;
+}
+
+/* modal-video */
+
+.modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none;
+}
+
+.modal-video>div {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-video>div>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7) url("../images/index/video_close_normal.png");
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal-video>div>.video2 {
+    display: none;
+}
+
+.foot>p>a:hover {
+    color: #dadada;
+}
