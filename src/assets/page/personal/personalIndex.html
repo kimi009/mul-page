@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>个人版</title>
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+</head>
+
+<body id='root' style='display: none'>
+  <div class="wrap">
+    <div class="header">
+      <div class="am-header-inner">
+        <div class="top-nav">
+          <div class="laymid">
+            <ul class="fl">
+              <li class="on">
+                <a>个人版</a>
+              </li>
+              <li>
+                <a href="./companyIndex.html">企业版</a>
+              </li>
+              <li>
+                <a href="./platform.html">开放平台</a>
+              </li>
+              <li>
+                <a href="./collect.html">票据收集</a>
+              </li>
+              <li>
+                <a href="./partnerIndex.html">合作伙伴</a>
+              </li>
+            </ul>
+            <p class="user">
+              <span>您好，</span>
+              <span></span>
+              <span></span>
+              <a href="javascript:;" onclick="logout()">退出</a>
+            </p>
+          </div>
+        </div>
+        <div class="main-nav">
+          <div class="laymid">
+            <div class="psb-logo" onclick="window.location.href='../../../index.html'"></div>
+            <div class="main-menu">
+              <ul>
+                <li class="channel on">
+                  <a href="./personalIndex.html" class="channel-a">首页</a>
+                </li>
+                <li class="channel">
+                  <a href="./download.html" class="channel-a">下载</a>
+                </li>
+                <li class="channel">
+                  <a href="./about-us.html" class="channel-a">关于我们</a>
+                </li>
+              </ul>
+              <div class="login-top">
+                <a href="javascript:;" onclick="$('.modal-login').fadeIn()">登录</a>
+                <a href="./register.html">注册</a>
+              </div>
+              <div class="enter">
+                <a href="javascript:;" onclick="enterPsb();">进入我的票税宝</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="am-body">
+      <div class="am-page">
+        <div class="am-bg first"></div>
+        <div class="main-content view1">
+          <img class="words" src="../..//images/personal/slogan1.png">
+        </div>
+        <div class="login-mid">
+          <a href="javascript:;" onclick="$('.modal-login').fadeIn()">登 录</a>
+          <a href="register.html">立即注册</a>
+        </div>
+      </div>
+      <div class="am-page">
+        <div class="am-bg second"></div>
+        <div class="main-content view2">
+          <img class="words" src="../../images/personal/slogan2.png">
+        </div>
+      </div>
+      <div class="am-page">
+        <div class="am-bg third"></div>
+        <div class="main-content view3">
+          <img class="words" src="../../images/personal/sologan3.png">
+        </div>
+      </div>
+      <div class="am-page">
+        <div class="am-bg fourth"></div>
+        <div class="main-content view4">
+          <img class="words" src="../../images/personal/slogan4.png">
+        </div>
+      </div>
+      <div class="am-page">
+        <div class="am-bg fifth"></div>
+        <div class="main-content view5">
+          <img class="words" src="../../images/personal/slogan5.png">
+        </div>
+        <div class="foot" style="position: relative; top: -250px; z-index: 9">
+          <p>Copyright © 2016-2018 广州湛蓝数据科技有限公司 版权所有</p>
+          <p>
+            <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18023998号</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="onepage-pagination">
+      <a id="onepage-pagination-0" href="javascript:;" class="active" onclick="onScrollPage(0,this)">
+        <i class="dotted"></i>
+      </a>
+      <a id="onepage-pagination-1" href="javascript:;" onclick="onScrollPage(1,this)">
+        <i class="dotted"></i>
+      </a>
+      <a id="onepage-pagination-2" href="javascript:;" onclick="onScrollPage(2,this)">
+        <i class="dotted"></i>
+      </a>
+      <a id="onepage-pagination-3" href="javascript:;" onclick="onScrollPage(3,this)">
+        <i class="dotted"></i>
+      </a>
+      <a id="onepage-pagination-4" href="javascript:;" onclick="onScrollPage(4,this)">
+        <i class="dotted"></i>
+      </a>
+    </div>
+
+  </div>
+  <div class="modal-login">
+    <div class="content">
+      <a href="javascript:;" class="close" onclick="$('.modal-login').fadeOut()"></a>
+      <!-- 二维码登录 <a href="javascript:;" class="way" onclick="$(this).toggleClass('active')"></a> -->
+      <p>登录票税宝</p>
+      <div class="tip"></div>
+      <div class="account">
+        <i class="userico ico"></i>
+        <input type="text" placeholder="请输入账号" id="account" oninput="showClose(this)" onkeyup="value=value.replace(/[^\d]/g,'') "
+          ng-pattern="/[^a-zA-Z]/">
+        <i class="close" onclick="$(this).prev().val('');$('#psw').val('');$(this).fadeOut();"></i>
+      </div>
+      <div class="psw">
+        <i class="pswico ico"></i>
+        <input type="password" placeholder="请输入密码" id="psw" oninput="showClose(this)" maxlength="30">
+        <!-- <i class="close" onclick="$(this).prev().val('');$(this).fadeOut();"></i> -->
+      </div>
+      <a href="reset-psw.html" class="forget">忘记登录密码？</a>
+      <a href="javascript:;" class="login-btn" onclick="login()">登 录</a>
+      <a href="register.html" class="register-btn">免费注册</a>
+    </div>
+  </div>
+</body>
+
+</html>

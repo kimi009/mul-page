@@ -29,8 +29,16 @@ let sourcePath = './src/assets/page/'
 //     })
 //   })(0)
 // })
+
+// fs.readFile(pth, 'utf8', function (err, data) {
+//   var res = data.replace("</title>", "</title>\n\t<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>")
+//   console.log(res)
+//   fs.writeFile(pth, res, 'utf8', function (err) {
+//     console.log(err)
+//   })
+// })
 function addHtmlWebpackPlugin(sourcePathName, entryIsUseSourcePath = false) {
-  let sourcePath = sourcePathName ? `./src/assets/page/${sourcePathName}/*.html` : `./src/pages/*.html`,
+  let sourcePath = sourcePathName ? `./src/assets/page/${sourcePathName}/*.html` : `./src/assets/page/*.html`,
     entryFileName = sourcePathName ? `./src/assets/js/${sourcePathName}` : `./src/assets/js`;
   glob.sync(sourcePath).forEach(pth => {
     let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
@@ -46,6 +54,8 @@ function addHtmlWebpackPlugin(sourcePathName, entryIsUseSourcePath = false) {
 addHtmlWebpackPlugin();
 addHtmlWebpackPlugin('collect');
 addHtmlWebpackPlugin('personal');
+addHtmlWebpackPlugin('company');
+addHtmlWebpackPlugin('platform');
 addHtmlWebpackPlugin('product', true);
 addHtmlWebpackPlugin('partner')
 

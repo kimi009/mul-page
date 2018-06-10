@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>重置密码</title>
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png"><link rel="shortcut icon" href="./icons/favicon.ico"></head>
+
+<body id='root' style='display: none'>
+  <div class="wrap">
+    <div class="header">
+      <div class="psb-logo" onclick="window.location.href='../../../index.html'"></div>
+      <p class="title">
+        <span></span>
+        <span>重置登录密码</span>
+      </p>
+      <div class="main-menu">
+        <a href="./personalIndex.html" class="channel-a">首页</a>
+        <a href="./download.html" class="channel-a">下载</a>
+        <a href="./about-us.html" class="channel-a">关于我们</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="reset">
+        <div class="title">
+          <p>请输入您需要重置的新密码</p>
+        </div>
+        <div class="content">
+          <div class="phone">
+            <span> 手 机 号 码</span>
+            <input type="text" oninput="reset.openSmsBtn(this);reset.checkCanReset()" id="phone" onblur="reset.checkPhone(this)" placeholder="请输入你的手机号"
+              onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/">
+            <i></i>
+            <div class="tip">
+              请输入正确的手机号
+            </div>
+          </div>
+          <div class="sms">
+            <span>手机验证码</span>
+            <input type="text" oninput="reset.checkCanReset()" maxlength="6" onblur="reset.checkSms(this)" id="ValidCode" placeholder="请输入你的验证码">
+            <i></i>
+            <div class="tip">
+              验证码不正确
+            </div>
+            <a href="javascript:;" id="smsBtn" onclick="reset.sendSms(this)">获取验证码</a>
+          </div>
+          <div class="psw">
+            <span> 设 置 密 码</span>
+            <input type="password" oninput="reset.checkCanReset()" onblur="reset.checkPsw(this)" max="30" id="psw" placeholder="请输入密码">
+            <i></i>
+            <div class="tip">
+              请输入6-30位非汉字
+            </div>
+          </div>
+          <div class="cpsw">
+            <span> 确 认 密 码</span>
+            <input type="password" oninput="reset.checkCanReset()" onblur="reset.checkCpsw(this)" max="30" id="cpsw" placeholder="请再次输入密码">
+            <i></i>
+            <div class="tip">
+              两次密码输入不一致
+            </div>
+          </div>
+          <a href="javascript:;" onclick="reset.reset()">重置密码</a>
+        </div>
+        <div class="commonTip">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <p>Copyright © 2016-2018 广州湛蓝数据科技有限公司 版权所有</p>
+      <p>
+        <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备18023998号</a>
+      </p>
+    </div>
+  </div>
+<script type="text/javascript" src="./js/reset-psw.min.js"></script></body>
+
+</html>
