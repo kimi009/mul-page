@@ -3,6 +3,7 @@ import '@/assets/css/personal/person-index.css'
 require('@/assets/js/jquery.easing.1.3.js')
 require('@/assets/plugins/toast/toast.js')
 require('jquery-scrollify')
+require('./commonLoad.js')
 import {
   common,
   api
@@ -21,38 +22,6 @@ window.onScrollPage = function onScrollPage(page, obj) {
     $(".login-top").css("display", "inline-block");
   }
 }
-$('.am-page').css({
-  'height': $(window).height()
-});
-$.scrollify({
-  section: '.am-page',
-  scrollSpeed: 1000,
-  offset: 0,
-  scrollbars: true,
-  before: function (obj) {
-    if (obj === 0) {
-      $("#onepage-pagination-0").addClass("active").siblings().removeClass("active");
-      $(".login-top").hide();
-    }
-    if (obj === 1) {
-      $("#onepage-pagination-1").addClass("active").siblings().removeClass("active");
-      $(".login-top").css("display", "inline-block");
-    }
-    if (obj === 2) {
-      $("#onepage-pagination-2").addClass("active").siblings().removeClass("active");
-      $(".login-top").css("display", "inline-block");
-    }
-    if (obj === 3) {
-      $("#onepage-pagination-3").addClass("active").siblings().removeClass("active");
-      $(".login-top").css("display", "inline-block");
-    }
-    if (obj === 4) {
-      $("#onepage-pagination-4").addClass("active").siblings().removeClass("active");
-      $(".login-top").css("display", "inline-block");
-    }
-  },
-  after: function (obj) {}
-});
 //登录
 window.login = function login() {
   if ($("#account").val() === "") {
@@ -107,20 +76,54 @@ window.logout = function logout() {
     }
   })
 }
-$(function () {
-  //判断是否已经登录
-  common.postdata.Token = localStorage.getItem("token");
-  var url = common.ApiPath + api.GetMemberDetail;
-  if (common.postdata.Token) {
-    common.DoAjax(url, common.postdata, function (data) {
-      console.log(data);
-      if (data.ResCode === 1000) {
-        $(".laymid>.user>span:eq(1)").text(data.Data.NickName);
-        $(".laymid>.user").show();
-        $(".login-mid").remove();
-        $(".login-top").remove();
-        $(".enter").css("display", "inline-block");
+window.loadComplete = function () {
+  $('.am-page').css({
+    'height': $(window).height()
+  });
+  $.scrollify({
+    section: '.am-page',
+    scrollSpeed: 1000,
+    offset: 0,
+    scrollbars: true,
+    before: function (obj) {
+      if (obj === 0) {
+        $("#onepage-pagination-0").addClass("active").siblings().removeClass("active");
+        $(".login-top").hide();
       }
-    })
-  }
-})
+      if (obj === 1) {
+        $("#onepage-pagination-1").addClass("active").siblings().removeClass("active");
+        $(".login-top").css("display", "inline-block");
+      }
+      if (obj === 2) {
+        $("#onepage-pagination-2").addClass("active").siblings().removeClass("active");
+        $(".login-top").css("display", "inline-block");
+      }
+      if (obj === 3) {
+        $("#onepage-pagination-3").addClass("active").siblings().removeClass("active");
+        $(".login-top").css("display", "inline-block");
+      }
+      if (obj === 4) {
+        $("#onepage-pagination-4").addClass("active").siblings().removeClass("active");
+        $(".login-top").css("display", "inline-block");
+      }
+    },
+    after: function (obj) {}
+  });
+  $(function () {
+    //判断是否已经登录
+    common.postdata.Token = localStorage.getItem("token");
+    var url = common.ApiPath + api.GetMemberDetail;
+    if (common.postdata.Token) {
+      common.DoAjax(url, common.postdata, function (data) {
+        console.log(data);
+        if (data.ResCode === 1000) {
+          $(".laymid>.user>span:eq(1)").text(data.Data.NickName);
+          $(".laymid>.user").show();
+          $(".login-mid").remove();
+          $(".login-top").remove();
+          $(".enter").css("display", "inline-block");
+        }
+      })
+    }
+  })
+}

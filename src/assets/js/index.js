@@ -4,6 +4,44 @@ import {
   common,
   api
 } from '@/assets/js/meta.js'
+require('./commonLoad.js')
+
+window.loadComplete = function () {
+  $(function () {
+    //判断是否已经登录
+    common.postdata.Token = localStorage.getItem("token");
+    var url = common.ApiPath + api.GetMemberDetail;
+    if (common.postdata.Token) {
+      common.DoAjax(url, common.postdata, function (data) {
+        console.log(data);
+        if (data.ResCode === 1000) {
+          $(".login").hide();
+          $(".logined>#name").text(data.Data.NickName);
+          $(".logined").show();
+        }
+      })
+    } else {
+      $(".logined").hide();
+      $(".login").show();
+    }
+
+    // 获取视频地址
+    var getVideoUrl = common.ApiPath + api.getVideo;
+    common.DoAjax(getVideoUrl, common.postdata, function (data) {
+      console.log(data);
+      if (data.ResCode === 1000) {
+        common.video1 = data.Data.DataList[0].Video.VideoUrl;
+        common.video2 = data.Data.DataList[1].Video.VideoUrl;
+        common.image1 = data.Data.DataList[0].Video.Thumbnail;
+        common.image2 = data.Data.DataList[1].Video.Thumbnail;
+        $("#video1").attr("src", common.video1);
+        $("#video2").attr("src", common.video2);
+        $(".video1:eq(0)").css("background-image", "url(" + common.image1 + ")");
+        $(".video2:eq(0)").css("background-image", "url(" + common.image2 + ")");
+      }
+    })
+  })
+}
 
 window.playVideo = function playVideo(ele) {
   if ($(ele).hasClass('pause')) {
@@ -90,38 +128,3 @@ window.logout = function logout() {
     }
   })
 }
-
-$(function () {
-  //判断是否已经登录
-  common.postdata.Token = localStorage.getItem("token");
-  var url = common.ApiPath + api.GetMemberDetail;
-  if (common.postdata.Token) {
-    common.DoAjax(url, common.postdata, function (data) {
-      console.log(data);
-      if (data.ResCode === 1000) {
-        $(".login").hide();
-        $(".logined>#name").text(data.Data.NickName);
-        $(".logined").show();
-      }
-    })
-  } else {
-    $(".logined").hide();
-    $(".login").show();
-  }
-
-  // 获取视频地址
-  var getVideoUrl = common.ApiPath + api.getVideo;
-  common.DoAjax(getVideoUrl, common.postdata, function (data) {
-    console.log(data);
-    if (data.ResCode === 1000) {
-      common.video1 = data.Data.DataList[0].Video.VideoUrl;
-      common.video2 = data.Data.DataList[1].Video.VideoUrl;
-      common.image1 = data.Data.DataList[0].Video.Thumbnail;
-      common.image2 = data.Data.DataList[1].Video.Thumbnail;
-      $("#video1").attr("src", common.video1);
-      $("#video2").attr("src", common.video2);
-      $(".video1:eq(0)").css("background-image", "url(" + common.image1 + ")");
-      $(".video2:eq(0)").css("background-image", "url(" + common.image2 + ")");
-    }
-  })
-})

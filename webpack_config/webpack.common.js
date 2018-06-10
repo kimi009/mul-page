@@ -9,36 +9,76 @@ const fs = require('fs')
 
 let entries = {}
 let htmlPlugin = []
-let sourcePath = './src/pages/'
-fs.readdir(sourcePath, (err, data) => {
-  if (err) {
-    throw err;
-  }
-  (function getFiles(i) {
-    if (i == data.length) {
-      return false;
+let sourcePath = './src/assets/page/'
+// fs.readdir(sourcePath, (err, data) => {
+//   if (err) {
+//     throw err;
+//   }
+//   (function getFiles(i) {
+//     if (i == data.length) {
+//       return false;
+//     }
+
+//     fs.stat(path.resolve(sourcePath, data[i]), function (err, stats) {
+//       if (stats.isDirectory()) {
+
+//       } else {
+//         console.log(path.resolve(sourcePath, data[i]))
+//       }
+//       getFiles(i + 1)
+//     })
+//   })(0)
+// })
+function addHtmlWebpackPlugin(sourcePathName, entryIsUseSourcePath = false) {
+  let sourcePath = sourcePathName ? `./src/assets/page/${sourcePathName}/*.html` : `./src/pages/*.html`,
+    entryFileName = sourcePathName ? `./src/assets/js/${sourcePathName}` : `./src/assets/js`;
+  glob.sync(sourcePath).forEach(pth => {
+    let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
+    entries[filename] = `${entryFileName}/${entryIsUseSourcePath ? sourcePathName : filename}.js`
+    let htmlConf = {
+      filename: filename + '.html',
+      template: pth,
+      chunks: ['vendor', filename]
     }
-    fs.stat(path.resolve(sourcePath, data[i]), function (err, stats) {
-      if (stats.isDirectory()) {
+    htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
+  })
+}
+addHtmlWebpackPlugin();
+addHtmlWebpackPlugin('collect');
+addHtmlWebpackPlugin('personal');
+addHtmlWebpackPlugin('product', true);
+addHtmlWebpackPlugin('partner')
 
-      } else {
-        console.log(path.resolve(sourcePath, data[i]))
-      }
-      getFiles(i + 1)
-    })
-  })(0)
-})
-
-glob.sync('./src/pages/*.html').forEach(pth => {
-  let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
-  entries[filename] = './src/assets/js/' + filename + '.js'
-  let htmlConf = {
-    filename: filename + '.html',
-    template: pth,
-    chunks: ['vendor', filename]
-  }
-  htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
-})
+// glob.sync('./src/assets/page/personal/*.html').forEach(pth => {
+//   let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
+//   entries[filename] = './src/assets/js/personal/' + filename + '.js'
+//   let htmlConf = {
+//     filename: filename + '.html',
+//     template: pth,
+//     chunks: ['vendor', filename]
+//   }
+//   htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
+// })
+// glob.sync('./src/assets/page/product/*.html').forEach(pth => {
+//   let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
+//   entries[filename] = './src/assets/js/productCommon.js'
+//   let htmlConf = {
+//     filename: filename + '.html',
+//     template: pth,
+//     chunks: ['vendor', filename]
+//   }
+//   htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
+// })
+// glob.sync('./src/pages/*.html').forEach(pth => {
+//   let filename = pth.substring(pth.lastIndexOf('\/') + 1, pth.lastIndexOf('.'))
+//   entries[filename] = './src/assets/js/' + filename + '.js'
+//   let htmlConf = {
+//     filename: filename + '.html',
+//     template: pth,
+//     chunks: ['vendor', filename]
+//   }
+//   htmlPlugin.push(new HtmlWebpackPlugin(htmlConf))
+// })
 module.exports = {
   entry: entries,
   output: {
@@ -137,6 +177,7 @@ module.exports = {
     ...htmlPlugin,
     new webpack.ProvidePlugin({ //加载jq
       $: 'jquery',
+      'window.$': 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
