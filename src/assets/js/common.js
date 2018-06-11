@@ -1,3 +1,4 @@
+const uuidv5 = require('uuid/v5');
 const common = {
   // 本地环境
   // ApiPath: "http://mypsb.cn/api/dev",
@@ -27,13 +28,22 @@ const common = {
     "Latlng": "",
     "Token": ""
   },
-  DoAjax: function (url, data, callback, type) {
-    $.ajax({
+  DoAjax: function (url, reqData, callback, type) {
+    return $.ajax({
       url: url,
       type: type ? type : 'POST',
-      data: JSON.stringify(data),
+      data: JSON.stringify(reqData),
       contentType: "application/json;",
-      beforeSend: function () {},
+      beforeSend: function () {
+        var uuid = localStorage.getItem('UUIDPSB')
+        if (!uuid) {
+          var newUuid = uuidv5('mypsb', uuidv5.DNS);
+          localStorage.setItem('UUIDPSB', newUuid)
+        }
+        var temp = JSON.parse(this.data);
+        temp.DeviceId = uuid;
+        this.data = JSON.stringify(temp)
+      },
       complete: function () {
         // console.log("DoAjax--complete");
       },
@@ -67,7 +77,8 @@ const common = {
       }
     }
     return null;
-  }
+  },
+  PREREQUESTTIME: 'PREREQUESTTIME'//前置接口请求的事件
 }
 export {
   common

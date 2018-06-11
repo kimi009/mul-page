@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>注册-票税宝</title>
+  <title>重置密码</title>
 	<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png"><link rel="shortcut icon" href="./icons/favicon.ico"></head>
 
 <body id='root' style='display: none'>
   <div class="wrap">
@@ -13,7 +13,7 @@
       <div class="psb-logo" onclick="window.location.href='../../../index.html'"></div>
       <p class="title">
         <span></span>
-        <span>注册</span>
+        <span>重置登录密码</span>
       </p>
       <div class="main-menu">
         <a href="./personalIndex.html" class="channel-a">首页</a>
@@ -22,23 +22,15 @@
       </div>
     </div>
     <div class="content">
-      <div class="register">
-        <div class="type">
-          <a href="javascript:;" class="person active">
-            <i></i>
-            <span>个人账户</span>
-          </a>
-          <a href="javascript:;" class="company">
-            <i></i>
-            <span>企业账户</span>
-            <p>(暂未开通)</p>
-          </a>
+      <div class="reset">
+        <div class="title">
+          <p>请输入您需要重置的新密码</p>
         </div>
         <div class="content">
           <div class="phone">
             <span> 手 机 号 码</span>
-            <input type="text" id="phone" onblur="checkPhone(this)" oninput="openSmsBtn(this);checkCanRegiter()"
-              placeholder="请输入你的手机号" onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/">
+            <input type="text" oninput="reset.openSmsBtn(this);reset.checkCanReset()" id="phone" onblur="reset.checkPhone(this)" placeholder="请输入你的手机号"
+              onkeyup="value=value.replace(/[^\d]/g,'') " ng-pattern="/[^a-zA-Z]/">
             <i></i>
             <div class="tip">
               请输入正确的手机号
@@ -46,16 +38,16 @@
           </div>
           <div class="sms">
             <span>手机验证码</span>
-            <input type="text" oninput="checkCanRegiter()" id="ValidCode" maxlength="6" onblur="checkSms(this)" placeholder="请输入你的验证码">
+            <input type="text" oninput="reset.checkCanReset()" maxlength="6" onblur="reset.checkSms(this)" id="ValidCode" placeholder="请输入你的验证码">
             <i></i>
             <div class="tip">
               验证码不正确
             </div>
-            <a href="javascript:;" id="smsBtn" onclick="sendSms(this)">获取验证码</a>
+            <a href="javascript:;" id="smsBtn" onclick="reset.sendSms(this)">获取验证码</a>
           </div>
           <div class="psw">
             <span> 设 置 密 码</span>
-            <input type="password" oninput="checkCanRegiter()" onblur="checkPsw(this)" max="30" id="psw" placeholder="请输入密码">
+            <input type="password" oninput="reset.checkCanReset()" onblur="reset.checkPsw(this)" max="30" id="psw" placeholder="请输入密码">
             <i></i>
             <div class="tip">
               请输入6-30位非汉字
@@ -63,25 +55,17 @@
           </div>
           <div class="cpsw">
             <span> 确 认 密 码</span>
-            <input type="password" oninput="checkCanRegiter()" onblur="checkCpsw(this)" max="30" id="cpsw" placeholder="请再次输入密码">
+            <input type="password" oninput="reset.checkCanReset()" onblur="reset.checkCpsw(this)" max="30" id="cpsw" placeholder="请再次输入密码">
             <i></i>
             <div class="tip">
               两次密码输入不一致
             </div>
           </div>
-          <a href="javascript:;" onclick="register()">注 册</a>
+          <a href="javascript:;" onclick="reset.reset()">重置密码</a>
         </div>
         <div class="commonTip">
           <p></p>
         </div>
-      </div>
-      <div class="tips">
-        <p>注册票税宝，开启您贴身的发票管家</p>
-        <div class="tip1">智能归集电子发票</div>
-        <hr>
-        <div class="tip2">一键储存</div>
-        <hr>
-        <div class="tip3">在家也能报销</div>
       </div>
     </div>
     <div class="foot">
@@ -91,6 +75,6 @@
       </p>
     </div>
   </div>
-</body>
+<script type="text/javascript" src="./js/reset-psw.min.js"></script></body>
 
 </html>

@@ -4,42 +4,52 @@ import '@/assets/css/personal/register.css'
 require('@/assets/plugins/toast/toast.js')
 import {
   common,
-  api
+  api,
+  preRequestDeal
 } from '../meta.js'
 require('../commonLoad.js')
+import GenerateSec from '../secDeal.js'
 
-window.loadComplete = function(){}
+window.loadComplete = function () {
+
+}
+preRequestDeal();
 var countdown = 60;
 // 点击发送验证码
 window.sendSms = function (ele) {
-  var url = common.ApiPath + api.SendSms;
-  var postdata = {
-    FlagType: 1, //区分来源（0-验证码登陆,1-注册,2-找回密码,3-手机或邮箱验证）  
-    Account: $("#phone").val()
-  }
-  postdata = $.extend(common.postdata, postdata);
-  common.DoAjax(url, postdata, function (data) {
-    console.log(data);
-    if (data.ResCode === 1000) {
-      register.showSecond(ele);
-    } else {
-      $(".commonTip>p").text(data.Msg);
-      $(".commonTip").fadeIn();
+  let generateSec = new GenerateSec();
+  generateSec.testApiProtection(startSend)
+
+  function startSend() {
+    var url = common.ApiPath + api.SendSms;
+    var postdata = {
+      FlagType: 1, //区分来源（0-验证码登陆,1-注册,2-找回密码,3-手机或邮箱验证）  
+      Account: $("#phone").val()
     }
-  })
+    postdata = $.extend(common.postdata, postdata);
+    common.DoAjax(url, postdata, function (data) {
+      console.log(data);
+      if (data.ResCode === 1000) {
+        showSecond(ele);
+      } else {
+        $(".commonTip>p").text(data.Msg);
+        $(".commonTip").fadeIn();
+      }
+    })
+  }
 };
 // 显示倒计时
 window.showSecond = function (ele) {
-  if (register.countdown === 0) {
+  if (countdown === 0) {
     $(ele).text("重新获取验证码");
-    register.countdown = 60;
+    countdown = 60;
     $(ele).css("pointer-events", "auto");
   } else {
-    $(ele).text("重新获取验证码" + "(" + register.countdown + ")");
+    $(ele).text("重新获取验证码" + "(" + countdown + ")");
     $(ele).css("pointer-events", "none");
-    register.countdown--;
+    countdown--;
     setTimeout(function () {
-      register.showSecond(ele)
+      showSecond(ele)
     }, 1000);
   }
 };

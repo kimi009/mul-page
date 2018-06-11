@@ -6,7 +6,10 @@ var api = {
   SendSms: "/Sms/SendSms", //发送验证码
   ResetPassword: "/Ticket/ResetPassword", //重置密码
   getVideo: "/Moment/GetMoments", //获取首页视频
-  getStrategySetting: "/ApiProtection/GetStrategySetting"
+  preRequest: "/Ticket/Invoice",
+  getProtectionToken: "/ApiProtection/GetProtectionToken",
+  getStrategySetting: "/ApiProtection/GetStrategySetting",
+  testApiProtection: "/ApiProtection/TestApiProtection"
 }
 export {
   api
