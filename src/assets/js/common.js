@@ -1,20 +1,20 @@
 const common = {
   // 本地环境
-  // ApiPath: "http://psb.mobi/api/dev",
+  // ApiPath: "http://mypsb.cn/api/dev",
   // LocalPath: "http://10.0.0.77:8092",
   // PsbPath: "http://10.0.0.77:8091",
   // 正式环境
-  ApiPath: "http://psb.mobi/api",
-  LocalPath: "http://mypsb.cn/",
-  PsbPath: "http://mypsb.cn/Web/dist/index.html",
+  // ApiPath: "http://mypsb.cn/api",
+  // LocalPath: "http://mypsb.cn/",
+  // PsbPath: "http://mypsb.cn/Web/dist/index.html",
   // 测试环境
-  // ApiPath: "http://psb.mobi/api/test",
-  // LocalPath: "http://psb.mobi/api/test/WebSite",
-  // PsbPath: "http://psb.mobi/api/test/Web/dist/index.html",
+  // ApiPath: "http://mypsb.cn/api/test",
+  // LocalPath: "http://mypsb.cn/api/test/WebSite",
+  // PsbPath: "http://mypsb.cn/api/test/Web/dist/index.html",
   // 开发环境
-  // ApiPath: "http://psb.mobi/api/dev",
-  // LocalPath: "http://psb.mobi/api/dev/WebSite",
-  // PsbPath: "http://psb.mobi/api/dev/Web/dist/index.html",
+  ApiPath: "http://mypsb.cn/api/dev",
+  LocalPath: "http://mypsb.cn/api/dev/WebSite",
+  PsbPath: "http://mypsb.cn/api/dev/Web/dist/index.html",
 
   // 视频地址   video1 生活中的票税宝  video2  工作中的票税宝
   video1: "",

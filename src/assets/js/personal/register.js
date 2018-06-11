@@ -8,6 +8,7 @@ import {
 } from '../meta.js'
 require('../commonLoad.js')
 
+window.loadComplete = function(){}
 var countdown = 60;
 // 点击发送验证码
 window.sendSms = function (ele) {

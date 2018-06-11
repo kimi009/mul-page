@@ -5,7 +5,8 @@ var api = {
   LoginOut: "/Ticket/Logout", //退出
   SendSms: "/Sms/SendSms", //发送验证码
   ResetPassword: "/Ticket/ResetPassword", //重置密码
-  getVideo: "/Moment/GetMoments" //获取首页视频
+  getVideo: "/Moment/GetMoments", //获取首页视频
+  getStrategySetting: "/ApiProtection/GetStrategySetting"
 }
 export {
   api
